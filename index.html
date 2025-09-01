@@ -1,59 +1,141 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FDND Visitekaartje</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visitekaartje</title>
   </head>
   <body>
-    
-    <article class="profile-card-example">
-      
-      <header class="profile-card-example-header">
-        
-        <h1>Jane Doe</h1>
-        
-        <p><em>Creatieve Frontend Developer in spé</em></p>
-        
-        <button class="profile-card-example-button">
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <title>Wijzig layout</title>
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-        </button>
-        
-      </header>
-  
-      <img src="assets/creative-coder.png" alt="" width="800" height="800" class="profile-card-example-img">
+    <img class="paspoort" src="./assets/paspoort.png" id="id-paspoort" />
 
-      <dl class="profile-card-example-dl">
-        <dt>HTML</dt>
-        <dd>🏆🏆🏆</dd>
-        
-        <dt>CSS</dt>
-        <dd>🏆🏆</dd>
-        
-        <dt>JavaScript</dt>
-        <dd>🏆🏆🏆🏆</dd>
-      </dl>
-  
-      <p>Het WEB is te gek! <br> Met HTML, CSS en JS kan ik vette, interactieve web apps maken.</p>
-      
+    <article class="article-paspoort" id="id-article">
+      <section class="section-a">
+        <h4>Kwaliteiten</h4>
+        <div class="section-a__text">
+          <p>- Deadline gericht werken</p>
+          <p>- Vol Discipline werken</p>
+          <p>- Creatief bezig zijn en nieuwe dingen bedenken</p>
+        </div>
+      </section>
+      <section class="section-b">
+        <h4>Amibitie</h4>
+        <p>- Eigen bedrijf starten</p>
+        <p>- Cumlade slagen :)</p>
+      </section>
+      <section class="section-c">
+        <h4>Passie</h4>
+        <p>Coderen</p>
+        <p>Reizen</p>
+        <p>Muziek</p>
+      </section>
+      <section class="section-d">
+        <h4>Studie</h4>
+        <p>Mediacollege Amsterdam</p>
+        <p>Front-end design en development</p>
+      </section>
     </article>
-
-    <script src="scripts/script.js"></script>
-    
   </body>
 </html>
+<script>
+  const foto = document.getElementById("id-paspoort");
+  const article = document.getElementById("id-article");
+
+  foto.addEventListener("click", function () {
+    foto.style.display = "none";
+    article.style.display = "flex";
+  });
+</script>
+
+<style>
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    display: ;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+
+  .paspoort {
+    width: 25%;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .paspoort:hover {
+    animation: mijnanimatie 1.5s infinite;
+  }
+
+  .display-paspoort {
+    display: none;
+  }
+
+  .article-paspoort {
+    background: grey;
+    width: 50%;
+    height: 550px;
+    display: none;
+    border-radius: 12px;
+    flex-wrap: wrap;
+  }
+
+  .section-a {
+    width: 50%;
+    height: 50%;
+    padding: 30px;
+    border-right: 2px solid black;
+    font-size: 120%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .section-a__text {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .section-b {
+    width: 50%;
+    height: 50%;
+    padding: 30px;
+    font-size: 120%;
+  }
+
+  .section-c {
+    width: 50%;
+    height: 50%;
+    padding: 30px;
+    font-size: 120%;
+    border-right: 2px solid black;
+  }
+
+  .section-d {
+    width: 50%;
+    height: 50%;
+    padding: 30px;
+    font-size: 120%;
+  }
+
+  @keyframes mijnanimatie {
+    0% {
+      scale: 100%;
+    }
+    50% {
+      scale: 105%;
+    }
+    100% {
+      scale: 100%;
+    }
+  }
+</style>
