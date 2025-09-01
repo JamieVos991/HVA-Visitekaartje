@@ -9,3 +9,5 @@
 - Ik heb al eerder met deze werkwijze gewerkt, aangezien ik al in het bedrijfsleven actief ben geweest en enige ervaring heb met coderen (HTML, CSS, JavaScript, Frameworks). Daarom verwacht ik dat deze opdracht niet heel lastig zal zijn.
 
 De instructie van deze leertaak vind je in de [INSTRUCTIONS](https://github.com/fdnd-task/your-tribe-profile-card/blob/main/docs/INSTRUCTIONS.md)
+
+<a href="https://jamievos991.github.io/HVA-Visitekaartje/">Live Link</a>
