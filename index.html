@@ -4,211 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visitekaartje</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <img class="paspoort" src="./assets/paspoort.png" id="id-paspoort" />
-    <article class="article-paspoort" id="id-article">
-      <div class="shadow">
-        <section class="section-a" id="paspoort_a">
-          <p class="jamie">Jamie Vos</p>
-          <!-- <img class="section-a__img" src="./assets/unnamed.jpg"> -->
-          <!-- <h4>Kwaliteiten</h4> -->
-          <!-- <div class="section-a__text"> -->
-          <!-- <p>- Deadline gericht werken</p>
-          <p>- Vol Discipline werken</p>
-          <p>- Creatief bezig zijn en nieuwe dingen bedenken</p> -->
-          <!-- <p class="text">Jamie Vos</p> -->
+    <main>
+      <article>
+        <section>
+          <img src="./assets/paspoort.png" />
         </section>
-        <!-- <section class="section-b">
-          <h4>Amibitie</h4>
-          <p>- Eigen bedrijf starten</p>
-          <p>- Cumlade slagen :)</p>
-        </section> -->
-      </div>
-      <div class="section">
-        <section class="section-c" id="paspoort_b">
-          <h4>Passie</h4>
-          <p>Coderen</p>
-          <p>Reizen</p>
-          <p>Muziek</p>
+
+        <section id="back2" class="section-passpoort-b"></section>
+        <section class="section-info">
+          <div>
+            <h1>Republique Francaise</h1>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <h2>Naam</h2>
+                <p>Jamie Vos</p>
+              </li>
+              <li>
+                <h2>Geboortedatum</h2>
+                <p>16 05 2004</p>
+              </li>
+              <li>
+                <h2>Studie</h2>
+                <p>Front-end development en design</p>
+              </li>
+              <li>
+                <h2>Vooropleiding</h2>
+                <p>Software development</p>
+              </li>
+              <li>
+                <h2>Studenten nummer</h2>
+                <p>500964123</p>
+              </li>
+              <li>
+                <h2>Skills</h2>
+                <p class="item">- Deadline gericht werken</p>
+                <p class="item">- Discipline</p>
+                <p class="item">- Leergierig</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>>a>>>>Jamie>>Vos</p>
+          </div>
         </section>
-        <section class="section-d">
-          <h4>Studie</h4>
-          <p>Mediacollege Amsterdam</p>
-          <p>Front-end design en development</p>
-        </section>
-      </div>
-    </article>
+      </article>
+    </main>
   </body>
+  <script src="scripts/script.js"></script>
 </html>
-<script>
-  const foto = document.getElementById("id-paspoort");
-  const article = document.getElementById("id-article");
-  const paspoort_a = document.getElementById("paspoort_a");
-  const paspoort_b = document.getElementById("paspoort_b");
-
-  foto.addEventListener("click", function () {
-    foto.style.display = "none";
-    article.style.display = "flex";
-  });
-
-  paspoort_a.addEventListener("click", function () {
-    article.style.display = "none";
-    foto.style.display = "flex";
-  });
-
-  paspoort_b.addEventListener("click", function () {
-    article.style.display = "none";
-    foto.style.display = "flex";
-  });
-</script>
-
-<style>
-  @font-face {
-    font-family: "Backslash";
-    src: url("./assets/backslash/Backslash-Reguler.otf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  *,
-  *::before,
-  *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .jamie {
-    text-transform: uppercase;
-    letter-spacing: 13px;
-  }
-
-  body {
-    min-height: 100vh;
-    background: whitesmoke;
-    display: flex;
-    padding-top: 30px;
-    align-items: center;
-    font-family: "Arimo", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    justify-content: center;
-  }
-
-  .paspoort {
-    width: 25%;
-    border-radius: 12px;
-    cursor: pointer;
-    z-index: 1;
-  }
-
-  .paspoort:hover,
-  .paspoort:hover ~ .boardingpass {
-    animation: mijnanimatie 1.5s infinite;
-  }
-
-  .display-paspoort {
-    display: none;
-  }
-
-  .boardingpass {
-    transform: rotate(-90deg);
-    z-index: 0;
-    clip-path: inset(0 0 0 50%);
-    top: 250px;
-    position: absolute;
-  }
-
-  .article-paspoort {
-    width: 45%;
-    height: 750px;
-    display: none;
-    cursor: pointer;
-    gap: 10px;
-    border-radius: 42px;
-    flex-wrap: wrap;
-  }
-
-  .section-a {
-    width: 100%;
-    height: 100%;
-    padding: 30px;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 120%;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .section {
-    background: #f0e5d4;
-    display: flex;
-    width: 100%;
-    height: 50%;
-  }
-
-  .shadow {
-    display: flex;
-    width: 100%;
-    background: #44444e;
-    height: 40%;
-  }
-
-  .section-a__img {
-    width: 50%;
-    border-radius: 50%;
-  }
-
-  .section-a__text {
-    display: flex;
-    gap: 5px;
-    flex-direction: column;
-  }
-
-  .text {
-    font-weight: 900;
-    font-size: 140%;
-  }
-
-  .section-b {
-    width: 50%;
-    height: 50%;
-    padding: 30px;
-    font-size: 120%;
-  }
-
-  .section-c {
-    width: 50%;
-    height: 50%;
-    padding: 30px;
-    font-size: 120%;
-  }
-
-  .section-d {
-    width: 50%;
-    height: 50%;
-    padding: 30px;
-    font-size: 120%;
-  }
-
-  @keyframes mijnanimatie {
-    0% {
-      scale: 100%;
-    }
-    50% {
-      scale: 105%;
-    }
-    100% {
-      scale: 100%;
-    }
-  }
-</style>
