@@ -72,10 +72,6 @@
     justify-content: space-between;
   }
 
-  /* section:nth-of-type(3) h1 {
-    padding-bottom: 17px;
-  } */
-  
   article:hover section:nth-of-type(1), article:hover section:nth-of-type(2) {
     rotate:y -180deg;
   } 
@@ -102,11 +98,6 @@
   ul li h2 {
     font-size: 50%;
   }
-
-  /* .last-text {
-    position: absolute;
-    bottom: 10px;
-  } */
   
   input[type="checkbox"] {
     background-color: red;
@@ -117,4 +108,8 @@
     z-index: 1;
     top: 30px;
     left: 30px;
+  }
+
+  .geen-link {
+    pointer-events: none;
   }
