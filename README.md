@@ -10,4 +10,4 @@
 
 De instructie van deze leertaak vind je in de [INSTRUCTIONS](https://github.com/fdnd-task/your-tribe-profile-card/blob/main/docs/INSTRUCTIONS.md)
 
-<a href="https://jamievos991.github.io/HVA-Visitekaartje/">Live Link</a>
+
